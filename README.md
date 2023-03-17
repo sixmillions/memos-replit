@@ -11,6 +11,13 @@
 
 ## 方式1
 
+1. 打开我创建的[模板地址](https://replit.com/@sixmillions/memos-replit)
+2. 点击右上角 `Use Template`
+
+![use-template](./img/use-template.png)
+
+## 方式2
+
 1. clone本项目到replit，语言选择go
 2. 运行main.sh
 
@@ -20,7 +27,7 @@
 
 ![success](./img/run-success.png)
 
-## 方式2
+## 方式3
 
 1. 参考下面的[构建方式](#构建方式)构建出memos
 2. 将memos上传到replit
@@ -105,4 +112,8 @@ go build -o memos ./main.go
 ![创建cron-job](./img/create-cron-job.png)
 
 ![cron-job](./img/cron-job-config.png)
+
+# 最后
+
+感谢Memos开源社区的各位大佬
 
