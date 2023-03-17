@@ -9,7 +9,7 @@ if [ ! -d ./db ];then
     mkdir ./db
 fi
 
-MEMOS_URL=${REPL_SLUG}.${REPL_OWNER}.repl.co
+MEMOS_URL=https://${REPL_SLUG}.${REPL_OWNER}.repl.co
 
 echo "click url: $MEMOS_URL"
 
