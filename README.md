@@ -113,6 +113,20 @@ go build -o memos ./main.go
 
 ![cron-job](./img/cron-job-config.png)
 
+# 自定义域名解析
+
+在replit上添加自定义域名
+
+![replit-dns-config](./img/custom-url.png)
+
+然后域名解析配置一下，我这里用的是cloudflare
+
+添加 `cname` 和 `txt` 解析
+
+![cloudflare-config-1](./img/cloudflare-config-1.png)
+
+![cloudflare-config-2](./img/cloudflare-config-2.png)
+
 # 最后
 
 感谢Memos开源社区的各位大佬
