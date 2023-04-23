@@ -27,6 +27,11 @@
 
 ![success](./img/run-success.png)
 
+**注意：** 
+- 检查 `.replit` 文件（点击`Files` 最右边三个点，选择 `Show hidden files`, 就能看到该文件）
+- 这种方式导入，有时候replit会覆盖这个文件
+- 如果发现和本项目不一样，重新copy一份进去，然后刷新页面重新进一下这个项目
+
 ## 方式3
 
 1. 参考下面的[构建方式](#构建方式)构建出memos
@@ -87,7 +92,7 @@ rm -rf ./server/dist && cp -r web/dist ./server/
 go build -o memos ./main.go
 ```
 
-这样就构建出来 `memos` 了
+这样就构建出来 `memos` 这个可执行文件了，在项目根路径
 
 # 防止replit休眠
 
@@ -126,6 +131,30 @@ go build -o memos ./main.go
 ![cloudflare-config-1](./img/cloudflare-config-1.png)
 
 ![cloudflare-config-2](./img/cloudflare-config-2.png)
+
+# 版本升级
+
+目前还不是自动构建，有新版memos可以email我一下，我快速构建一下
+
+**升级一时爽，数据火葬场！！！！注意备份数据**
+
+```bash
+# 先备份数据
+zip memeos-db.zip -qr db/*
+# 然后下载该数据，这个就是你的数据库
+
+# 备份旧的memos
+mv memos memos.bk
+
+# 安装最新版（本项目构建的最新版）
+bash main.sh
+
+# 或者指定版本（本项目构建的某个版本）
+bash main.sh v0.12.2
+```
+
+- v0.11.2
+- v0.12.2 最新
 
 # 最后
 
