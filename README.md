@@ -1,11 +1,35 @@
 # 介绍
 
-在[replit](https://replit.com)上运行最新版[memos](https://github.com/usememos/memos)(v0.11.2)
+在[replit](https://replit.com)上运行最新版[memos](https://github.com/usememos/memos)(v0.12.2)
 
 > https://replit.com  
 > https://github.com/usememos/memos  
 
 ![MEMOS](./img/memos-v0.11.2.png)
+
+# 版本升级
+
+目前还不是自动构建，有新版memos可以email我一下，我快速构建一下
+
+**升级一时爽，数据火葬场！！！！注意备份数据**
+
+```bash
+# 先备份数据
+zip memeos-db.zip -qr db/*
+# 然后下载该数据，这个就是你的数据库
+
+# 备份旧的memos
+mv memos memos.bk
+
+# 安装最新版（本项目构建的最新版）
+bash main.sh
+
+# 或者指定版本（本项目构建的某个版本）
+bash main.sh v0.12.2
+```
+
+- v0.12.2 最新
+- v0.11.2
 
 # 运行
 
@@ -42,11 +66,13 @@
 
 ## 构建思路
 
-1. replit中go语言环境使用的是ubuntu20.04
-2. 用同样的环境构建出memos，例如: [gitpod](https://gitpod.io)
-3. copy到replit运行
+1. replit中go语言环境使用的是 **ubuntu20.04**
+2. 用**同样的环境**构建出memos，例如: [gitpod](https://gitpod.io)，docker
+3. copy构建出来的可执行文件到replit上运行
 
 ## 具体步骤
+
+以v0.11.2为例
 
 ### clone memos项目
 
@@ -131,30 +157,6 @@ go build -o memos ./main.go
 ![cloudflare-config-1](./img/cloudflare-config-1.png)
 
 ![cloudflare-config-2](./img/cloudflare-config-2.png)
-
-# 版本升级
-
-目前还不是自动构建，有新版memos可以email我一下，我快速构建一下
-
-**升级一时爽，数据火葬场！！！！注意备份数据**
-
-```bash
-# 先备份数据
-zip memeos-db.zip -qr db/*
-# 然后下载该数据，这个就是你的数据库
-
-# 备份旧的memos
-mv memos memos.bk
-
-# 安装最新版（本项目构建的最新版）
-bash main.sh
-
-# 或者指定版本（本项目构建的某个版本）
-bash main.sh v0.12.2
-```
-
-- v0.11.2
-- v0.12.2 最新
 
 # 最后
 
