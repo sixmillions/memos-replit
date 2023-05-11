@@ -158,6 +158,20 @@ go build -o memos ./main.go
 
 ![cloudflare-config-2](./img/cloudflare-config-2.png)
 
+# 私有问题
+
+replit免费版本，所有项目都是公开的，所以任何人都可以看到你的文件，包括数据库
+
+既然任何人都可以查看，所以不要用来存重要数据或者隐私数据
+
+## 教育版本
+
+对于教育版本是可以创建私有项目的
+
+1. 选择teams，然后填写信息。`Team display name` 随便填写， `Team username` 是要拼接到url的，比如我填写的是 `old-six`
+2. 紧接在这个team里面创建项目，`Tile` 如果和上面的 `Team username` 不一样就会拼到url中，如果一样，就只显示一个，所以为了之后访问url简短，这里我也用 `old-six`
+3. 最后我的访问地址就是 `old-six.repl.co`，如果上面两个名字不一样就是 `pjname.teamname.repl.co`
+
 # 最后
 
 感谢Memos开源社区的各位大佬
