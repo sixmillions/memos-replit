@@ -1,6 +1,6 @@
 # 介绍
 
-在[replit](https://replit.com)上运行最新版[memos](https://github.com/usememos/memos)(v0.12.2)
+在[replit](https://replit.com)上运行最新版[memos](https://github.com/usememos/memos)(v0.13.0)
 
 > https://replit.com  
 > https://github.com/usememos/memos  
