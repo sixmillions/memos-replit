@@ -1,2 +1,5 @@
 db/
 memos*
+dist/
+dist*
+*.zip

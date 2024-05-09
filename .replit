@@ -7,3 +7,7 @@ pattern = "**/*.go"
 
 [nix]
 channel = "stable-22_11"
+
+[[ports]]
+localPort = 6969
+externalPort = 80

@@ -12,7 +12,12 @@ if [ ! -e memos ];then
       version="$(curl -fsSLI -o /dev/null -w "%{url_effective}" https://github.com/sixmillions/memos-replit/releases/latest)"
       version="${version#https://github.com/sixmillions/memos-replit/releases/tag/}"
     fi
-    wget https://github.com/sixmillions/memos-replit/releases/download/${version}/memos
+    wget https://github.com/sixmillions/memos-replit/releases/download/${version}/memos-replit.zip
+    # 解压
+    if [ -d ./dist ];then
+       mv -f dist ./dist.bak
+    fi
+    unzip ./memos-replit.zip
 fi
 
 echo "run memos >>> $(date '+%Y-%m-%d %H:%M:%S')"
@@ -30,9 +35,9 @@ if [ ! -d ./db/.thumbnail_cache ];then
     mkdir ./db/.thumbnail_cache
 fi
 
-MEMOS_URL=https://${REPL_SLUG}.${REPL_OWNER}.repl.co
+#MEMOS_URL=https://${REPL_SLUG}.${REPL_OWNER}.repl.co
 
-echo "click url: $MEMOS_URL"
+#echo "click url: $MEMOS_URL"
 
 # 运行memos
 ./memos --data ./db --mode prod --port 6969
